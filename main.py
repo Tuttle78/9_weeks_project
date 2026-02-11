@@ -3,6 +3,11 @@ import recipe
 
 money = 0
 
+inventory_dictionary={"lemons": 0,
+                      "sugar": 0,
+                      "ice_cubes":0
+                      }
+money=0
 print("Welcome to the lemonade stand game")
 diff_choice = (input("What difficulty are you chosing 1. easy 2. medium 3. hard:\n"))
 if diff_choice == 1 or "easy" or "Easy":
@@ -23,3 +28,4 @@ if game_choices == 1:
     game_recipe_2 = int(input("How much sugar do you want for each cup:\n"))
     game_recipe_3 = int(input("How much ice cubes do you want for each cup:\n"))
     recipe.recipe(game_recipe_1, game_recipe_2, game_recipe_3)
+    print("You have",shop.ingredients())
