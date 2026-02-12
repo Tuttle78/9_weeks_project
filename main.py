@@ -24,6 +24,7 @@ if diff_choice == 3 or "hard" or diff_choice == "Hard":
     inventory_dictionary['lemons'] = 100  
     inventory_dictionary['sugar'] = 100
     inventory_dictionary['ice_cubes'] = 50
+
     money = 200
 
 game_choices = int(input("What would you like to do 1. recipe 2. start the day 3. see inventory 4. shop:\n"))

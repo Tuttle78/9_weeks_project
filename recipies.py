@@ -7,4 +7,5 @@ def recipe():
     recipe.append(int(input("How many ice cubes do you want for each cup:\n")))
     print("Your recipe is", recipe)
     
+
         
