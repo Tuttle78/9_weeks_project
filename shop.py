@@ -9,5 +9,3 @@ def shop(inventory_dictionary):
     elif choice=="ice_cubes"or"3":
         ice_cubes=int(input("How many ice_cubes do you want to buy?\n"))
         inventory_dictionary['ice_cubes']+ice_cubes
-
-    print(shop(inventory_dictionary=))
