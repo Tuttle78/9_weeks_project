@@ -1,5 +1,3 @@
-import shop
-
 def recipe():
     recipe=[]
     recipe.append(int(input("How many lemons do you want for each cup:\n")))

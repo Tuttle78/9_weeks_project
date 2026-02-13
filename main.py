@@ -1,4 +1,3 @@
-import shop
 import recipies
 # import day
 
@@ -7,6 +6,18 @@ inventory_dictionary={"lemons": 0,
                       "sugar": 0,
                       "ice_cubes":0
                       }
+
+def shop(inventory_dictionary):
+    choice=input("What would you like to buy? (1=lemon, 2=sugar, 3=ice cubes)\n")
+    if choice=="lemons" or choice == "1":
+        lemons=int(input("How many lemons do you want to buy?\n"))
+        inventory_dictionary['lemons']+=lemons
+    elif choice== "sugar" or "2":
+        sugar=int(input("How much sugar do you want to buy?\n"))
+        inventory_dictionary['sugar']+=sugar
+    elif choice=="ice_cubes"or"3":
+        ice_cubes=int(input("How many ice_cubes do you want to buy?\n"))
+        inventory_dictionary['ice_cubes']+ice_cubes
 
 print("Welcome to the lemonade stand game")
 diff_choice = (input("What difficulty are you chosing 1. easy 2. medium 3. hard:\n"))
@@ -49,3 +60,8 @@ if start == "yes":
       input("Opening your shop")
       input("Shop opened, customers rolling in!")
 
+game_choices = int(input("What would you like to do 1. recipe 2. start the day 3. see inventory 4. shop:\n"))
+if game_choices == 3:
+    print("You have", inventory_dictionary)
+if game_choices == 1:
+    recipies.recipe()
