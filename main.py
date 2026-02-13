@@ -1,5 +1,6 @@
 import shop
 import recipies
+# import day
 
 money = 0
 
@@ -32,3 +33,7 @@ if game_choices == 3:
     print("You have", inventory_dictionary)
 if game_choices == 1:
     recipies.recipe()
+if game_choices == 4:
+    shop.shop()
+#if game_choices == 2:
+#    day.day_start()

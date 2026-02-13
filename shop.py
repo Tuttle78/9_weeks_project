@@ -1,3 +1,4 @@
+from main import inventory_dictionary
 def shop():
     choice=input("What would you like to buy? (1=lemon, 2=sugar, 3=ice cubes)\n")
     if choice=="lemons" or "1":
