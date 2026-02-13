@@ -27,7 +27,7 @@ if diff_choice == 3 or "hard" or diff_choice == "Hard":
 
     money = 200
 
-game_choices = int(input("What would you like to do 1. recipe 2. start the day 3. see inventory 4. shop:\n"))
+game_choices = int(input("What would you like to do 1 = recipe, 2 = start the day, 3 = see inventory, 4 = shop:\n"))
 if game_choices == 3:
     print("You have", inventory_dictionary)
 if game_choices == 1:
