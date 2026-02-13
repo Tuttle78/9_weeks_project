@@ -1,5 +1,6 @@
 import shop
 import recipies
+# import day
 
 money = 0
 inventory_dictionary={"lemons": 0,
@@ -28,7 +29,17 @@ elif diff_choice == 3 or "hard" or diff_choice == "Hard":
 
 game_choices = int(input("What would you like to do? (1=recipe, 2=start the day, see inventory, 4=shop:\n"))
 if game_choices == 3:
-        print("You have", inventory_dictionary)
+
+    game_choices = int(input("What would you like to do 1. recipe 2. start the day 3. see inventory 4. shop:\n"))
+if game_choices == 3:
+    print("You have", inventory_dictionary)
+elif game_choices == 1:
+    recipies.recipe()
+elif game_choices == 4:
+    shop.shop()
+#if game_choices == 2:
+#    day.day_start()
+    print("You have", inventory_dictionary)
 if game_choices == 1:
         recipies.recipe()
 if game_choices == 2:
@@ -37,3 +48,4 @@ if game_choices == 2:
 if start == "yes":
       input("Opening your shop")
       input("Shop opened, customers rolling in!")
+
