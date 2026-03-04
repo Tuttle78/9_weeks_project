@@ -13,7 +13,7 @@ inventory_dictionary={"lemons": 0,
 print("Welcome to the lemonade stand game")
 diff_choice = (input("What difficulty are you chosing? (1 = easy, 2 = medium, 3 = hard)\n"))
 if diff_choice == "1" or diff_choice == "Easy":
-    inventory_dictionary['lemons'] = 500 
+    inventory_dictionary['lemons'] = 500
     inventory_dictionary['sugar'] = 500
     inventory_dictionary['ice_cubes'] = 400
     money = 60
@@ -26,24 +26,26 @@ elif diff_choice == "2" or diff_choice == "Medium":
     inventory_dictionary['ice_cubes'] = 200
     money = 500
     days=28
-
+    goal =500
 elif diff_choice == "3" or diff_choice == "Hard":
     inventory_dictionary['lemons'] = 100
     inventory_dictionary['sugar'] = 100
     inventory_dictionary['ice_cubes'] = 50
     money = 200
-    days=14
-
+    days=21
+    goal=500
 else:
     print("invalid, quitting game")
 
 while day_num<days:
+    if money>= goal:
+        break
     game_choices = int(input("What would you like to do? (1 = recipe, 2 = start the day, 3 = see inventory, = 4 shop)\n"))
     if game_choices == 3:
-        print("You have", inventory_dictionary)
+        print("You have", inventory_dictionary, "and $"+ str(money))
 
-    elif game_choices == 4:
-        shop_screen(inventory_dictionary)
+    if game_choices == 4:
+        shop_screen(inventory_dictionary, money)
     
     if game_choices == 2:
         day_num+=1
