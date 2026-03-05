@@ -1,4 +1,4 @@
-import recipies
+from recipe import game_recipe
 from shop import shop_screen
 
 goal=0
@@ -40,7 +40,7 @@ else:
 while day_num<days:
     if money>= goal:
         break
-    game_choices = int(input("What would you like to do? (1 = recipe, 2 = start the day, 3 = see inventory, = 4 shop)\n"))
+    game_choices = int(input("What would you like to do? (1 = recipe, 2 = start the day, 3 = see inventory | 4 = shop)\n"))
     if game_choices == 3:
         print("You have", inventory_dictionary, "and $"+ str(money))
 
@@ -54,4 +54,4 @@ while day_num<days:
         print("Shop opened, customers rolling in!")
 
     if game_choices == 1:
-        recipies.recipe()
+        game_recipe
