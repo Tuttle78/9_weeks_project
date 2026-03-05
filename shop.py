@@ -1,5 +1,6 @@
 
 def shop_screen(inventory, money):
+    print(f"You have ${money}.")
     choice=input("What would you like to buy? (1: lemon, 2: sugar, 3: ice cubes)\n")
 
     if choice == "1":
@@ -27,3 +28,4 @@ def shop_screen(inventory, money):
         else:
             money -= amount*0.1
             inventory['ice_cubes'] += amount
+    print(f"You now have ${money}, {inventory['lemons']} lemons, {inventory['sugar']} sugar, & {inventory['ice_cubes']} ice cubes.")
