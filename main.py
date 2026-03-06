@@ -1,6 +1,11 @@
 from recipe import game_recipe
 from shop import shop_screen
-
+recipe={
+    "lemons":0,
+    "sugar":0,
+    "ice_cubes":0  
+    }
+cost=0
 goal=0
 day_num=0
 money=0
@@ -39,7 +44,10 @@ else:
 
 while day_num<days:
     if money>= goal:
+        print("You Win!")
         break
+    if money<=0:
+        print("You went bankrupt.")
     game_choices = int(input("What would you like to do? (1 = recipe, 2 = start the day, 3 = see inventory | 4 = shop)\n"))
     if game_choices == 3:
         print("You have", inventory_dictionary, "and $"+ str(money))
@@ -54,4 +62,4 @@ while day_num<days:
         print("Shop opened, customers rolling in!")
 
     if game_choices == 1:
-        game_recipe
+        game_recipe(recipe, cost)
